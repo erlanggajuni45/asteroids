@@ -9,7 +9,8 @@ def main() -> None:
     while True:
         log_state()
         for event in pygame.event.get():
-            pass
+            if event.type == pygame.QUIT:
+                return
         screen.fill(color='black')
         pygame.display.flip()
 
